@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excursion Sign-Up | Dollywood</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f1e8;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #7a1f1f, #3f1010);
+      color: white;
+      padding: 46px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { max-width: 720px; margin: 12px auto 0; }
+    nav {
+      background: white;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    nav a {
+      color: #7a1f1f;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 24px 16px 50px;
+    }
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 26px;
+      margin-bottom: 24px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.09);
+    }
+    .hero {
+      background: #fff9df;
+      border: 1px solid #ead47e;
+    }
+    h2 { color: #7a1f1f; margin-top: 0; }
+    .event-title { font-size: 2rem; }
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .detail-box {
+      background: #faf7f0;
+      border-left: 6px solid #f1c84b;
+      padding: 15px;
+      border-radius: 12px;
+    }
+    .detail-box strong {
+      display: block;
+      color: #4b1212;
+      margin-bottom: 4px;
+    }
+    .payment {
+      background: #fff7d7;
+      border: 1px solid #e6cc67;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 18px 0;
+    }
+    .button {
+      display: inline-block;
+      background: #7a1f1f;
+      color: white;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .button:hover { background: #551515; }
+    .secondary {
+      background: #222;
+    }
+    .note {
+      background: #eef6ff;
+      border: 1px solid #b7d8ff;
+      color: #1b4267;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 25px 15px;
+      font-size: .9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.65rem; }
+      .card { padding: 18px; }
+      .event-title { font-size: 1.55rem; }
+      nav a { display: inline-block; margin: 5px 7px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Excursion Sign-Up Website</h1>
+  <p>Review upcoming trips, submit your registration, and send payment to the person heading the excursion.</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#dollywood">Dollywood</a>
+  <a href="#payment">Payment</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main class="container">
+
+  <section id="home" class="card hero">
+    <h2>Upcoming Excursion</h2>
+    <p>Join us for a fun-filled trip to Dollywood in Pigeon Forge, Tennessee.</p>
+    <a class="button" href="#dollywood">View Dollywood Details</a>
+    <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Sign Up Now</a>
+  </section>
+
+  <section id="dollywood" class="card">
+    <h2 class="event-title">Dollywood</h2>
+    <p>
+      Dollywood is a major 165-acre theme park in Pigeon Forge, Tennessee.
+      Co-owned by country music legend Dolly Parton, it celebrates the culture and beauty
+      of the Great Smoky Mountains. The destination combines major thrill rides with
+      traditional Appalachian crafts, award-winning live music, and southern food.
+    </p>
+
+    <div class="details">
+      <div class="detail-box">
+        <strong>Date</strong>
+        August 28, 2026
+      </div>
+      <div class="detail-box">
+        <strong>Event Time</strong>
+        10:00 AM – 7:00 PM
+      </div>
+      <div class="detail-box">
+        <strong>Admission Price</strong>
+        $76.33 per person
+      </div>
+      <div class="detail-box">
+        <strong>Destination</strong>
+        Pigeon Forge, Tennessee
+      </div>
+    </div>
+
+    <h3>Ready to Sign Up?</h3>
+    <p>Click below to complete the official Google Form registration.</p>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Sign Up for Dollywood</a>
+  </section>
+
+  <section id="payment" class="card">
+    <h2>Payment Information</h2>
+    <div class="payment">
+      <p><strong>Admission Price:</strong> $76.33 per person</p>
+      <p><strong>Cash App:</strong> $WatsonAntony</p>
+      <p><strong>Apple Pay:</strong> 202-948-6379</p>
+      <p><strong>Important:</strong> Your spot is not confirmed until payment has been received.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Registration Reminder</h2>
+    <p>Please complete the Google Form and send payment using one of the payment methods listed above.</p>
+    <p>After submitting the form, your information will be collected in Google Forms.</p>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Open Sign-Up Form</a>
+  </section>
+
+</main>
+
+<footer>
+  Excursion Sign-Up Website | Dollywood 2026
+</footer>
+
+</body>
+</html>
