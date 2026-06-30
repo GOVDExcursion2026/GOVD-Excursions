@@ -170,24 +170,6 @@ body {
   margin: 18px 0;
 }
 
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--black);
-  border: 2px solid var(--gold);
-  text-decoration: none;
-  padding: 14px 22px;
-  border-radius: 8px;
-  font-weight: bold;
-  margin-top: 12px;
-}
-
-.button:hover {
-  background: var(--black);
-  color: var(--white);
-}
-
-/* Cleaned payment section */
 .payment-card {
   background: #080808;
   color: var(--white);
@@ -200,17 +182,10 @@ body {
 .payment-card h4 {
   color: var(--gold);
   font-size: 1.35rem;
-  margin: 0 0 6px;
+  margin: 0 0 16px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .5px;
-}
-
-.payment-card .payment-instruction {
-  color: #f0d37a;
-  text-align: center;
-  margin: 0 0 18px;
-  font-size: .95rem;
 }
 
 .payment-methods {
@@ -242,15 +217,40 @@ body {
   word-break: break-word;
 }
 
-.payment-note {
-  background: rgba(213,169,58,.12);
-  border-left: 4px solid var(--gold);
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin: 16px 0 0;
-  font-style: italic;
-  font-size: .95rem;
+.register-button {
+  display: block;
+  width: 100%;
   text-align: center;
+  background: var(--gold);
+  color: var(--black);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  padding: 15px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 22px;
+}
+
+.register-button:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.button:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 .coming-soon {
