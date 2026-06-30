@@ -201,6 +201,31 @@ body {
   color: var(--white);
 }
 
+.payment-inline {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.payment-inline h4 {
+  color: var(--gold);
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.payment-inline p {
+  margin: 7px 0;
+}
+
+.payment-inline .note {
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 12px;
+}
+
 .coming-soon {
   min-height: 340px;
   display: flex;
@@ -213,60 +238,6 @@ body {
 .coming-soon img {
   width: 110px;
   margin-bottom: 10px;
-}
-
-.payment-section,
-.event-payment {
-  background: var(--black);
-  color: var(--white);
-  border: 1px solid var(--gold);
-  border-radius: 14px;
-  padding: 28px;
-  margin-top: 26px;
-}
-
-.payment-section h2,
-.event-payment h2 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 0;
-}
-
-.payment-intro {
-  text-align: center;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
-.payment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-  margin-top: 18px;
-}
-
-.payment-box {
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 18px;
-  background: rgba(255,255,255,.06);
-}
-
-.payment-box h3 {
-  color: var(--gold);
-  margin-top: 0;
-  font-size: 1.35rem;
-}
-
-.payment-value {
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-
-.payment-note {
-  text-align: center;
-  margin-top: 18px;
-  font-style: italic;
 }
 
 .event-page-hero {

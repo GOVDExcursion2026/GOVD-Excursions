@@ -6,5 +6,3 @@ Upload these files and folders to the root of the GitHub repository:
 - style.css
 - images/
 - excursions/
-
-Do not rename the files.
