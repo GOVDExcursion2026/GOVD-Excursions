@@ -1,99 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOVD Excursions</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+  box-sizing: border-box;
+}
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      <img src="images/govd-logo.png" alt="GOVD logo">
-      <div class="brand-title"><span>GOVD</span> EXCURSIONS</div>
-    </a>
+:root {
+  --black: #050505;
+  --gold: #d5a93a;
+  --gold-dark: #a77919;
+  --cream: #f7f3eb;
+  --white: #ffffff;
+  --text: #111111;
+}
 
-    <nav class="nav">
-      <a href="index.html" class="active">HOME</a>
-      <a href="#excursions">EXCURSIONS</a>
-      <a href="#payment">PAYMENT</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </div>
-</header>
+html {
+  scroll-behavior: smooth;
+}
 
-<section class="hero">
-  <img src="images/govd-logo.png" alt="Gentlemen of Valor and Distinction Logo" class="hero-logo">
-  <h1>Gentlemen of <span>Valor & Distinction</span></h1>
-  <p>Excursions & Events</p>
-  <p class="tagline">Building Brotherhood. Creating Memories. Living with Distinction.</p>
-  <a class="button gold-button" href="#excursions">View Excursions</a>
-</section>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-<main class="container">
-  <section id="excursions">
-    <div class="section-title">
-      <small>Upcoming Excursions</small>
-      <h2>Join Us On Our Next Adventure</h2>
-    </div>
+.site-header {
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 3px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
 
-    <div class="cards">
-      <article class="card">
-        <img src="images/dollywood-banner.png" alt="Dollywood Excursion" class="card-image">
-        <div class="card-body">
-          <h3 class="event-title">Dollywood Excursion</h3>
-          <div class="detail"><strong>Date:</strong> August 28, 2026</div>
-          <div class="detail"><strong>Time:</strong> 10:00 AM – 7:00 PM</div>
-          <div class="detail"><strong>Location:</strong> Pigeon Forge, Tennessee</div>
-          <div class="detail"><strong>Admission Price:</strong> $76.33 per person</div>
-          <a class="button gold-button" href="excursions/dollywood.html">View Details & Register</a>
-        </div>
-      </article>
+.header-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-      <article class="card coming-soon">
-        <div class="card-body">
-          <img src="images/govd-logo.png" alt="GOVD Logo">
-          <h3 class="event-title">More Excursions Coming Soon</h3>
-          <p>Stay tuned for more exciting GOVD events.</p>
-        </div>
-      </article>
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  text-decoration: none;
+}
 
-      <article class="card coming-soon">
-        <div class="card-body">
-          <img src="images/govd-logo.png" alt="GOVD Logo">
-          <h3 class="event-title">More Excursions Coming Soon</h3>
-          <p>Stay tuned for more exciting GOVD events.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+.brand img {
+  width: 58px;
+}
 
-  <section id="payment" class="payment-section">
-    <h2>Payment Options</h2>
-    <p class="payment-intro">Please include your name and excursion in the payment note.</p>
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 
-    <div class="payment-grid">
-      <div class="payment-box">
-        <h3>Cash App</h3>
-        <p class="payment-value">$WatsonAntony</p>
-      </div>
+.brand-title span {
+  color: var(--gold);
+}
 
-      <div class="payment-box">
-        <h3>Apple Pay</h3>
-        <p class="payment-value">202-948-6379</p>
-      </div>
-    </div>
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 18px;
+}
 
-    <p class="payment-note">Your spot is not confirmed until payment has been received.</p>
-  </section>
-</main>
+.nav a:hover,
+.nav a.active {
+  color: var(--gold);
+}
 
-<footer id="contact" class="site-footer">
-  <p><strong>GOVD Excursions</strong></p>
-  <p><span>Gentlemen of Valor and Distinction | EST. 2013</span></p>
-</footer>
+.hero {
+  background:
+    radial-gradient(circle at left, rgba(213,169,58,.22), transparent 28%),
+    radial-gradient(circle at right, rgba(213,169,58,.16), transparent 30%),
+    linear-gradient(135deg, #050505, #111111 55%, #241506);
+  color: var(--white);
+  text-align: center;
+  padding: 58px 18px 66px;
+}
 
-</body>
-</html>
+.hero-logo {
+  width: 280px;
+  max-width: 85%;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 16px auto 0;
+  font-size: 1.1rem;
+}
+
+.tagline {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 36px 18px 54px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-title small {
+  color: var(--gold-dark);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 4px 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  text-transform: uppercase;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.13);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.card-image {
+  width: 100%;
+  display: block;
+}
+
+.event-title {
+  margin: 0 0 10px;
+  font-size: 1.55rem;
+  text-transform: uppercase;
+}
+
+.detail {
+  margin: 8px 0;
+}
+
+.button {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.gold-button {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.gold-button:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.coming-soon {
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #fbf7ee);
+}
+
+.coming-soon img {
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+.payment-section,
+.event-payment {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 26px;
+}
+
+.payment-section h2,
+.event-payment h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.payment-intro {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.payment-box {
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 18px;
+  background: rgba(255,255,255,.06);
+}
+
+.payment-box h3 {
+  color: var(--gold);
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.payment-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.payment-note {
+  text-align: center;
+  margin-top: 18px;
+  font-style: italic;
+}
+
+.event-page-hero {
+  background: var(--black);
+  color: var(--white);
+  padding: 34px 18px;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+}
+
+.event-page-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  text-transform: uppercase;
+}
+
+.event-layout {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 24px;
+}
+
+.side-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.13);
+  border: 1px solid rgba(0,0,0,.08);
+  align-self: start;
+}
+
+.register-panel {
+  background: #fff8e5;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.site-footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  border-top: 3px solid var(--gold);
+  padding: 25px 18px;
+}
+
+.site-footer span {
+  color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin: 7px 8px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .hero-logo {
+    width: 220px;
+  }
+
+  .event-layout {
+    grid-template-columns: 1fr;
+  }
+}
