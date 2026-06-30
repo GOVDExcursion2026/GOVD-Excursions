@@ -4,17 +4,11 @@
 
 :root {
   --black: #050505;
-  --charcoal: #141414;
   --gold: #d5a93a;
-  --gold-soft: #f5dd91;
+  --gold-dark: #a77919;
   --cream: #f7f3eb;
   --white: #ffffff;
   --text: #111111;
-  --muted: #666666;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -26,7 +20,8 @@ body {
 }
 
 .site-header {
-  background: rgba(5, 5, 5, .97);
+  background: var(--black);
+  color: var(--white);
   border-bottom: 3px solid var(--gold);
   position: sticky;
   top: 0;
@@ -34,12 +29,12 @@ body {
 }
 
 .header-inner {
-  max-width: 1180px;
+  max-width: 1150px;
   margin: auto;
   padding: 14px 18px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
 }
@@ -58,8 +53,8 @@ body {
 
 .brand-title {
   font-size: 1.35rem;
-  font-weight: 900;
-  letter-spacing: 1.2px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .brand-title span {
@@ -69,9 +64,8 @@ body {
 .nav a {
   color: var(--white);
   text-decoration: none;
-  font-weight: 800;
+  font-weight: bold;
   margin-left: 18px;
-  font-size: .95rem;
 }
 
 .nav a:hover {
@@ -80,26 +74,25 @@ body {
 
 .hero {
   background:
-    radial-gradient(circle at top left, rgba(213,169,58,.25), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(213,169,58,.15), transparent 30%),
-    linear-gradient(135deg, #050505, #141414 55%, #2a1a05);
+    radial-gradient(circle at left, rgba(213,169,58,.22), transparent 28%),
+    radial-gradient(circle at right, rgba(213,169,58,.16), transparent 30%),
+    linear-gradient(135deg, #050505, #111111 55%, #241506);
   color: var(--white);
   text-align: center;
-  padding: 72px 18px 82px;
+  padding: 58px 18px 66px;
 }
 
 .hero-logo {
-  width: 255px;
-  max-width: 82%;
+  width: 280px;
+  max-width: 85%;
   display: block;
   margin: 0 auto 18px;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.1rem, 6vw, 5rem);
-  line-height: 1;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -107,15 +100,74 @@ body {
   color: var(--gold);
 }
 
-.hero p {
-  max-width: 760px;
-  margin: 18px auto 0;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+.tagline {
+  color: var(--gold);
+  font-style: italic;
 }
 
-.tagline {
-  color: var(--gold-soft);
-  font-style: italic;
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 36px 18px 54px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-title small {
+  color: var(--gold-dark);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 4px 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  text-transform: uppercase;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.13);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.card-image {
+  width: 100%;
+  display: block;
+}
+
+.event-title {
+  margin: 0 0 10px;
+  font-size: 1.55rem;
+  text-transform: uppercase;
+}
+
+.detail {
+  margin: 8px 0;
+}
+
+.description-box {
+  background: #fff8e5;
+  border-left: 5px solid var(--gold);
+  padding: 14px;
+  border-radius: 8px;
+  margin: 18px 0;
 }
 
 .button {
@@ -125,10 +177,9 @@ body {
   border: 2px solid var(--gold);
   text-decoration: none;
   padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 900;
-  margin-top: 14px;
-  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
 .button:hover {
@@ -136,158 +187,12 @@ body {
   color: var(--white);
 }
 
-.container {
-  max-width: 1180px;
-  margin: auto;
-  padding: 42px 18px 58px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.section-title small {
-  color: #9c6d12;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.section-title h2 {
-  margin: 6px 0 0;
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  text-transform: uppercase;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 26px;
-}
-
-.excursion-card {
-  background: var(--white);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 16px 38px rgba(0,0,0,.16);
-  border: 1px solid rgba(0,0,0,.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.excursion-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 46px rgba(0,0,0,.20);
-}
-
-.card-image-wrap {
-  position: relative;
-}
-
-.card-image {
-  width: 100%;
-  display: block;
-}
-
-.badge {
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  background: var(--gold);
-  color: var(--black);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-weight: 900;
-  box-shadow: 0 8px 18px rgba(0,0,0,.25);
-}
-
-.card-content {
-  padding: 25px;
-}
-
-.card-content h3 {
-  margin: 0 0 12px;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin: 18px 0;
-}
-
-.info-box {
-  background: #fff8e5;
-  border-left: 5px solid var(--gold);
-  border-radius: 12px;
-  padding: 13px;
-}
-
-.info-box strong {
-  display: block;
-  font-size: .85rem;
-  text-transform: uppercase;
-  color: #6d4b09;
-}
-
-.description {
-  background: #f8f8f8;
-  border-radius: 14px;
-  padding: 16px;
-  margin: 18px 0;
-}
-
-.countdown-mini {
-  background: linear-gradient(135deg, #050505, #1c1c1c);
-  color: var(--white);
-  border: 1px solid var(--gold);
-  border-radius: 16px;
-  padding: 18px;
-  margin: 18px 0;
-}
-
-.countdown-mini h4 {
-  margin: 0 0 12px;
-  color: var(--gold);
-  text-transform: uppercase;
-}
-
-.countdown-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.countdown-box {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(213,169,58,.75);
-  border-radius: 12px;
-  padding: 10px 6px;
-  text-align: center;
-}
-
-.countdown-number {
-  display: block;
-  color: var(--gold);
-  font-weight: 900;
-  font-size: 1.45rem;
-  line-height: 1;
-}
-
-.countdown-label {
-  font-size: .7rem;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-
 .payment-card {
   background: var(--black);
   color: var(--white);
   border: 1px solid var(--gold);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 18px;
   margin-top: 20px;
 }
 
@@ -297,21 +202,21 @@ body {
   margin: 0 0 10px;
 }
 
-.payment-instruction {
-  color: var(--gold-soft);
+.payment-card .payment-instruction {
+  color: var(--gold);
+  margin-bottom: 14px;
 }
 
 .payment-methods {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 12px;
 }
 
 .payment-method {
-  background: rgba(255,255,255,.07);
+  background: rgba(255,255,255,.06);
   border: 1px solid rgba(213,169,58,.75);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 14px;
 }
 
@@ -322,8 +227,8 @@ body {
 }
 
 .payment-value {
-  font-weight: 900;
-  font-size: 1.08rem;
+  font-size: 1.15rem;
+  font-weight: 800;
 }
 
 .payment-note {
@@ -331,21 +236,18 @@ body {
   margin-top: 14px;
 }
 
-.coming-card {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,248,229,.96));
-  border: 2px dashed rgba(213,169,58,.8);
-  min-height: 420px;
+.coming-soon {
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px;
+  background: linear-gradient(180deg, #fff, #fbf7ee);
 }
 
-.coming-card img {
+.coming-soon img {
   width: 110px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .site-footer {
@@ -353,7 +255,7 @@ body {
   color: var(--white);
   text-align: center;
   border-top: 3px solid var(--gold);
-  padding: 26px 18px;
+  padding: 25px 18px;
 }
 
 .site-footer span {
@@ -375,24 +277,11 @@ body {
     margin: 7px 8px;
   }
 
-  .hero {
-    padding: 52px 16px 62px;
-  }
-
   .hero-logo {
-    width: 210px;
+    width: 220px;
   }
 
-  .info-grid,
   .payment-methods {
     grid-template-columns: 1fr;
-  }
-
-  .countdown-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-content {
-    padding: 21px;
   }
 }
