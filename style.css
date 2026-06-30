@@ -172,8 +172,8 @@ body {
 
 .button {
   display: inline-block;
-  background: var(--black);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--black);
   border: 2px solid var(--gold);
   text-decoration: none;
   padding: 14px 22px;
@@ -183,16 +183,6 @@ body {
 }
 
 .button:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.gold-button {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.gold-button:hover {
   background: var(--black);
   color: var(--white);
 }

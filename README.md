@@ -1,3 +1,3 @@
 # GOVD Excursions Website
 
-Upload these files and folders to the root of the GitHub repository.
+Single-page version. The register button links directly to Google Forms.
