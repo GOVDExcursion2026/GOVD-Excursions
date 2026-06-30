@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dollywood Excursion | GOVD Excursions</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../images/govd-logo.png" alt="GOVD logo">
+      <div class="brand-title"><span>GOVD</span> EXCURSIONS</div>
+    </a>
+
+    <nav class="nav">
+      <a href="../index.html">HOME</a>
+      <a href="../index.html#excursions" class="active">EXCURSIONS</a>
+      <a href="../index.html#payment">PAYMENT</a>
+      <a href="../index.html#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<section class="event-page-hero">
+  <h1>Dollywood Excursion</h1>
+  <p>Pigeon Forge, Tennessee</p>
+</section>
+
+<main class="container">
+  <div class="event-layout">
+    <section class="card">
+      <img src="../images/dollywood-banner.png" alt="Dollywood Excursion Banner" class="card-image">
+
+      <div class="card-body">
+        <h2>About This Excursion</h2>
+        <p>
+          Dollywood is a major 165-acre theme park in Pigeon Forge, Tennessee.
+          Co-owned by country music legend Dolly Parton, it celebrates the culture
+          and beauty of the Great Smoky Mountains. The destination combines major
+          thrill rides with traditional Appalachian crafts, award-winning live music,
+          and southern food.
+        </p>
+
+        <div class="register-panel">
+          <h2>Ready to Register?</h2>
+          <p>Complete the Google Form first, then send payment using Cash App or Apple Pay.</p>
+          <a class="button gold-button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">View Details & Register</a>
+        </div>
+
+        <section class="event-payment">
+          <h2>Payment Information</h2>
+          <p class="payment-intro">Please include your name and Dollywood excursion in the payment note.</p>
+
+          <div class="payment-grid">
+            <div class="payment-box">
+              <h3>Cash App</h3>
+              <p class="payment-value">$WatsonAntony</p>
+            </div>
+
+            <div class="payment-box">
+              <h3>Apple Pay</h3>
+              <p class="payment-value">202-948-6379</p>
+            </div>
+          </div>
+
+          <p class="payment-note">Your spot is not confirmed until payment has been received.</p>
+        </section>
+      </div>
+    </section>
+
+    <aside class="side-card">
+      <h2>Trip Details</h2>
+      <div class="detail"><strong>Date:</strong> August 28, 2026</div>
+      <div class="detail"><strong>Time:</strong> 10:00 AM – 7:00 PM</div>
+      <div class="detail"><strong>Location:</strong> Pigeon Forge, Tennessee</div>
+      <div class="detail"><strong>Admission Price:</strong> $76.33 per person</div>
+
+      <hr>
+
+      <h2>Registration Steps</h2>
+      <ol>
+        <li>Complete the Google Form.</li>
+        <li>Send payment using Cash App or Apple Pay.</li>
+        <li>Include your name and excursion in the payment note.</li>
+      </ol>
+
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Sign Up Now</a>
+      <br>
+      <a class="button gold-button" href="../index.html">Back to Home</a>
+    </aside>
+  </div>
+</main>
+
+<footer id="contact" class="site-footer">
+  <p><strong>GOVD Excursions</strong></p>
+  <p><span>Gentlemen of Valor and Distinction | EST. 2013</span></p>
+</footer>
+
+</body>
+</html>
