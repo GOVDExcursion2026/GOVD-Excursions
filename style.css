@@ -11,10 +11,6 @@
   --text: #111111;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -72,8 +68,7 @@ body {
   margin-left: 18px;
 }
 
-.nav a:hover,
-.nav a.active {
+.nav a:hover {
   color: var(--gold);
 }
 
@@ -99,17 +94,10 @@ body {
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.05;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .hero h1 span {
   color: var(--gold);
-}
-
-.hero p {
-  max-width: 760px;
-  margin: 16px auto 0;
-  font-size: 1.1rem;
 }
 
 .tagline {
@@ -143,7 +131,7 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 22px;
 }
 
@@ -174,6 +162,14 @@ body {
   margin: 8px 0;
 }
 
+.description-box {
+  background: #fff8e5;
+  border-left: 5px solid var(--gold);
+  padding: 14px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+
 .button {
   display: inline-block;
   background: var(--black);
@@ -201,29 +197,53 @@ body {
   color: var(--white);
 }
 
-.payment-inline {
+.payment-card {
   background: var(--black);
   color: var(--white);
   border: 1px solid var(--gold);
   border-radius: 12px;
   padding: 18px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
-.payment-inline h4 {
+.payment-card h4 {
   color: var(--gold);
+  font-size: 1.3rem;
   margin: 0 0 10px;
-  font-size: 1.2rem;
 }
 
-.payment-inline p {
-  margin: 7px 0;
-}
-
-.payment-inline .note {
+.payment-card .payment-instruction {
   color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.payment-method {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(213,169,58,.75);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.payment-method strong {
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.payment-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.payment-note {
   font-style: italic;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .coming-soon {
@@ -238,44 +258,6 @@ body {
 .coming-soon img {
   width: 110px;
   margin-bottom: 10px;
-}
-
-.event-page-hero {
-  background: var(--black);
-  color: var(--white);
-  padding: 34px 18px;
-  text-align: center;
-  border-bottom: 3px solid var(--gold);
-}
-
-.event-page-hero h1 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  text-transform: uppercase;
-}
-
-.event-layout {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 24px;
-}
-
-.side-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 22px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.13);
-  border: 1px solid rgba(0,0,0,.08);
-  align-self: start;
-}
-
-.register-panel {
-  background: #fff8e5;
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 18px;
-  margin-top: 20px;
-  text-align: center;
 }
 
 .site-footer {
@@ -305,15 +287,11 @@ body {
     margin: 7px 8px;
   }
 
-  .brand-title {
-    font-size: 1.15rem;
-  }
-
   .hero-logo {
     width: 220px;
   }
 
-  .event-layout {
+  .payment-methods {
     grid-template-columns: 1fr;
   }
 }
