@@ -187,53 +187,70 @@ body {
   color: var(--white);
 }
 
+/* Cleaned payment section */
 .payment-card {
-  background: var(--black);
+  background: #080808;
   color: var(--white);
   border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 18px;
-  margin-top: 20px;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 22px;
 }
 
 .payment-card h4 {
   color: var(--gold);
-  font-size: 1.3rem;
-  margin: 0 0 10px;
+  font-size: 1.35rem;
+  margin: 0 0 6px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 .payment-card .payment-instruction {
-  color: var(--gold);
-  margin-bottom: 14px;
+  color: #f0d37a;
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: .95rem;
 }
 
 .payment-methods {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
 }
 
 .payment-method {
-  background: rgba(255,255,255,.06);
+  background: rgba(255,255,255,.07);
   border: 1px solid rgba(213,169,58,.75);
-  border-radius: 10px;
-  padding: 14px;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
 }
 
 .payment-method strong {
   color: var(--gold);
   display: block;
-  margin-bottom: 4px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 .payment-value {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
+  word-break: break-word;
 }
 
 .payment-note {
+  background: rgba(213,169,58,.12);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 16px 0 0;
   font-style: italic;
-  margin-top: 14px;
+  font-size: .95rem;
+  text-align: center;
 }
 
 .coming-soon {
