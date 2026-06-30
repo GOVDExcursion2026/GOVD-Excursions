@@ -1,3 +1,3 @@
 # GOVD Excursions Website
 
-Modern single-page version with hero banner, excursion card, countdown, and direct Google Form registration.
+Version 9: card-focused layout with countdown inside the Dollywood card.

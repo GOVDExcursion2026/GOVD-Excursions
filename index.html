@@ -24,63 +24,79 @@
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <img src="images/govd-logo.png" alt="Gentlemen of Valor and Distinction Logo" class="hero-logo">
-    <h1>Gentlemen of <span>Valor & Distinction</span></h1>
-    <p>Excursions & Events</p>
-    <p class="tagline">Building Brotherhood. Creating Memories. Living with Distinction.</p>
-
-    <div class="hero-actions">
-      <a class="button" href="#excursions">View Upcoming Trip</a>
-      <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Register Now</a>
-    </div>
-  </div>
+  <img src="images/govd-logo.png" alt="Gentlemen of Valor and Distinction Logo" class="hero-logo">
+  <h1>Gentlemen of <span>Valor & Distinction</span></h1>
+  <p>Excursions & Events</p>
+  <p class="tagline">Building Brotherhood. Creating Memories. Living with Distinction.</p>
+  <a class="button" href="#excursions">View Excursions</a>
 </section>
 
 <main class="container">
   <section id="excursions">
     <div class="section-title">
-      <small>Upcoming Excursion</small>
-      <h2>Dollywood 2026</h2>
+      <small>Upcoming Excursions</small>
+      <h2>Choose Your Next Adventure</h2>
     </div>
 
-    <div class="excursion-grid">
-      <article class="event-card">
-        <div class="event-image-wrap">
-          <img src="images/dollywood-banner.png" alt="Dollywood Excursion" class="event-image">
-          <div class="event-badge">Now Open</div>
+    <div class="card-grid">
+      <article class="excursion-card">
+        <div class="card-image-wrap">
+          <img src="images/dollywood-banner.png" alt="Dollywood Excursion" class="card-image">
+          <div class="badge">Registration Open</div>
         </div>
 
-        <div class="event-body">
-          <h3 class="event-title">Dollywood Excursion</h3>
+        <div class="card-content">
+          <h3>Dollywood Excursion</h3>
 
-          <div class="event-details">
-            <div class="detail-box">
+          <div class="info-grid">
+            <div class="info-box">
               <strong>Date</strong>
               August 28, 2026
             </div>
-            <div class="detail-box">
+            <div class="info-box">
               <strong>Time</strong>
               10:00 AM – 7:00 PM
             </div>
-            <div class="detail-box">
+            <div class="info-box">
               <strong>Location</strong>
               Pigeon Forge, Tennessee
             </div>
-            <div class="detail-box">
-              <strong>Admission</strong>
+            <div class="info-box">
+              <strong>Cost</strong>
               $76.33 per person
             </div>
           </div>
 
-          <div class="description-box">
+          <div class="description">
             Dollywood is a major 165-acre theme park in Pigeon Forge, Tennessee.
             Co-owned by country music legend Dolly Parton, it celebrates the culture
             and beauty of the Great Smoky Mountains with thrill rides, Appalachian crafts,
             live music, and southern food.
           </div>
 
-          <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">View Details & Register</a>
+          <div class="countdown-mini">
+            <h4>Trip Begins In</h4>
+            <div class="countdown-row">
+              <div class="countdown-box">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-box">
+                <span class="countdown-number" id="hours">0</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-box">
+                <span class="countdown-number" id="minutes">0</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-box">
+                <span class="countdown-number" id="seconds">0</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Register Now</a>
 
           <div class="payment-card">
             <h4>Payment Options</h4>
@@ -103,45 +119,21 @@
         </div>
       </article>
 
-      <aside class="countdown-card">
-        <h3>Countdown to Dollywood</h3>
-        <p>August 28, 2026</p>
-
-        <div class="countdown">
-          <div class="countdown-box">
-            <span class="countdown-number" id="days">0</span>
-            <span class="countdown-label">Days</span>
-          </div>
-          <div class="countdown-box">
-            <span class="countdown-number" id="hours">0</span>
-            <span class="countdown-label">Hours</span>
-          </div>
-          <div class="countdown-box">
-            <span class="countdown-number" id="minutes">0</span>
-            <span class="countdown-label">Minutes</span>
-          </div>
-          <div class="countdown-box">
-            <span class="countdown-number" id="seconds">0</span>
-            <span class="countdown-label">Seconds</span>
-          </div>
+      <article class="excursion-card coming-card">
+        <div>
+          <img src="images/govd-logo.png" alt="GOVD Logo">
+          <h3>More Excursions Coming Soon</h3>
+          <p>Future trips and GOVD events will be added here.</p>
         </div>
+      </article>
 
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Reserve Your Spot</a>
-      </aside>
-    </div>
-
-    <div class="coming-grid">
-      <div class="coming-card">
-        <img src="images/govd-logo.png" alt="GOVD Logo">
-        <h3>More Excursions Coming Soon</h3>
-        <p>Future GOVD events will be added here.</p>
-      </div>
-
-      <div class="coming-card">
-        <img src="images/govd-logo.png" alt="GOVD Logo">
-        <h3>Stay Connected</h3>
-        <p>Check back for upcoming trips, events, and announcements.</p>
-      </div>
+      <article class="excursion-card coming-card">
+        <div>
+          <img src="images/govd-logo.png" alt="GOVD Logo">
+          <h3>Stay Connected</h3>
+          <p>Check back for announcements, new destinations, and registration updates.</p>
+        </div>
+      </article>
     </div>
   </section>
 </main>
