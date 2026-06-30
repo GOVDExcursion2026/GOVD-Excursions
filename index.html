@@ -24,31 +24,54 @@
 </header>
 
 <section class="hero">
-  <img src="images/govd-logo.png" alt="Gentlemen of Valor and Distinction Logo" class="hero-logo">
-  <h1>Gentlemen of <span>Valor & Distinction</span></h1>
-  <p>Excursions & Events</p>
-  <p class="tagline">Building Brotherhood. Creating Memories. Living with Distinction.</p>
-  <a class="button" href="#excursions">View Excursions</a>
+  <div class="hero-content">
+    <img src="images/govd-logo.png" alt="Gentlemen of Valor and Distinction Logo" class="hero-logo">
+    <h1>Gentlemen of <span>Valor & Distinction</span></h1>
+    <p>Excursions & Events</p>
+    <p class="tagline">Building Brotherhood. Creating Memories. Living with Distinction.</p>
+
+    <div class="hero-actions">
+      <a class="button" href="#excursions">View Upcoming Trip</a>
+      <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Register Now</a>
+    </div>
+  </div>
 </section>
 
 <main class="container">
   <section id="excursions">
     <div class="section-title">
-      <small>Upcoming Excursions</small>
-      <h2>Join Us On Our Next Adventure</h2>
+      <small>Upcoming Excursion</small>
+      <h2>Dollywood 2026</h2>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <img src="images/dollywood-banner.png" alt="Dollywood Excursion" class="card-image">
+    <div class="excursion-grid">
+      <article class="event-card">
+        <div class="event-image-wrap">
+          <img src="images/dollywood-banner.png" alt="Dollywood Excursion" class="event-image">
+          <div class="event-badge">Now Open</div>
+        </div>
 
-        <div class="card-body">
+        <div class="event-body">
           <h3 class="event-title">Dollywood Excursion</h3>
 
-          <div class="detail"><strong>Date:</strong> August 28, 2026</div>
-          <div class="detail"><strong>Time:</strong> 10:00 AM – 7:00 PM</div>
-          <div class="detail"><strong>Location:</strong> Pigeon Forge, Tennessee</div>
-          <div class="detail"><strong>Admission Price:</strong> $76.33 per person</div>
+          <div class="event-details">
+            <div class="detail-box">
+              <strong>Date</strong>
+              August 28, 2026
+            </div>
+            <div class="detail-box">
+              <strong>Time</strong>
+              10:00 AM – 7:00 PM
+            </div>
+            <div class="detail-box">
+              <strong>Location</strong>
+              Pigeon Forge, Tennessee
+            </div>
+            <div class="detail-box">
+              <strong>Admission</strong>
+              $76.33 per person
+            </div>
+          </div>
 
           <div class="description-box">
             Dollywood is a major 165-acre theme park in Pigeon Forge, Tennessee.
@@ -80,21 +103,45 @@
         </div>
       </article>
 
-      <article class="card coming-soon">
-        <div class="card-body">
-          <img src="images/govd-logo.png" alt="GOVD Logo">
-          <h3 class="event-title">More Excursions Coming Soon</h3>
-          <p>Stay tuned for more exciting GOVD events.</p>
-        </div>
-      </article>
+      <aside class="countdown-card">
+        <h3>Countdown to Dollywood</h3>
+        <p>August 28, 2026</p>
 
-      <article class="card coming-soon">
-        <div class="card-body">
-          <img src="images/govd-logo.png" alt="GOVD Logo">
-          <h3 class="event-title">More Excursions Coming Soon</h3>
-          <p>Stay tuned for more exciting GOVD events.</p>
+        <div class="countdown">
+          <div class="countdown-box">
+            <span class="countdown-number" id="days">0</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="hours">0</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="minutes">0</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="seconds">0</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
         </div>
-      </article>
+
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSew70NjYJgqdCBS-8g6Ek-wSPkg6OKiDWFWPs0jnCUrK6IFLA/viewform?usp=header" target="_blank" rel="noopener">Reserve Your Spot</a>
+      </aside>
+    </div>
+
+    <div class="coming-grid">
+      <div class="coming-card">
+        <img src="images/govd-logo.png" alt="GOVD Logo">
+        <h3>More Excursions Coming Soon</h3>
+        <p>Future GOVD events will be added here.</p>
+      </div>
+
+      <div class="coming-card">
+        <img src="images/govd-logo.png" alt="GOVD Logo">
+        <h3>Stay Connected</h3>
+        <p>Check back for upcoming trips, events, and announcements.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -103,6 +150,36 @@
   <p><strong>GOVD Excursions</strong></p>
   <p><span>Gentlemen of Valor and Distinction | EST. 2013</span></p>
 </footer>
+
+<script>
+  const tripDate = new Date("August 28, 2026 10:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = tripDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("days").textContent = "0";
+      document.getElementById("hours").textContent = "0";
+      document.getElementById("minutes").textContent = "0";
+      document.getElementById("seconds").textContent = "0";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>

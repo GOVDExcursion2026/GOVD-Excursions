@@ -1,3 +1,3 @@
 # GOVD Excursions Website
 
-Single-page version. The register button links directly to Google Forms.
+Modern single-page version with hero banner, excursion card, countdown, and direct Google Form registration.

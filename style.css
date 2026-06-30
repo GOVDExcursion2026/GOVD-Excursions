@@ -4,11 +4,17 @@
 
 :root {
   --black: #050505;
+  --charcoal: #141414;
   --gold: #d5a93a;
-  --gold-dark: #a77919;
+  --gold-soft: #f0d37a;
   --cream: #f7f3eb;
   --white: #ffffff;
   --text: #111111;
+  --muted: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +26,7 @@ body {
 }
 
 .site-header {
-  background: var(--black);
+  background: rgba(5, 5, 5, .96);
   color: var(--white);
   border-bottom: 3px solid var(--gold);
   position: sticky;
@@ -29,7 +35,7 @@ body {
 }
 
 .header-inner {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
   padding: 14px 18px;
   display: flex;
@@ -53,8 +59,8 @@ body {
 
 .brand-title {
   font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
 }
 
 .brand-title span {
@@ -64,8 +70,9 @@ body {
 .nav a {
   color: var(--white);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 800;
   margin-left: 18px;
+  font-size: .95rem;
 }
 
 .nav a:hover {
@@ -73,101 +80,49 @@ body {
 }
 
 .hero {
+  min-height: 620px;
   background:
-    radial-gradient(circle at left, rgba(213,169,58,.22), transparent 28%),
-    radial-gradient(circle at right, rgba(213,169,58,.16), transparent 30%),
-    linear-gradient(135deg, #050505, #111111 55%, #241506);
+    linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.76)),
+    url("images/dollywood-banner.png") center/cover no-repeat;
   color: var(--white);
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 58px 18px 66px;
+  padding: 70px 18px;
+}
+
+.hero-content {
+  max-width: 950px;
+  margin: auto;
 }
 
 .hero-logo {
-  width: 280px;
-  max-width: 85%;
-  display: block;
-  margin: 0 auto 18px;
+  width: 230px;
+  max-width: 80%;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.55));
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.2rem, 6vw, 5.2rem);
+  line-height: .98;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .hero h1 span {
   color: var(--gold);
 }
 
-.tagline {
-  color: var(--gold);
-  font-style: italic;
+.hero p {
+  max-width: 780px;
+  margin: 18px auto 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-.container {
-  max-width: 1150px;
-  margin: auto;
-  padding: 36px 18px 54px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.section-title small {
-  color: var(--gold-dark);
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.section-title h2 {
-  margin: 4px 0 0;
-  font-size: clamp(1.8rem, 4vw, 2.65rem);
-  text-transform: uppercase;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 22px;
-}
-
-.card {
-  background: var(--white);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,.13);
-  border: 1px solid rgba(0,0,0,.08);
-}
-
-.card-body {
-  padding: 22px;
-}
-
-.card-image {
-  width: 100%;
-  display: block;
-}
-
-.event-title {
-  margin: 0 0 10px;
-  font-size: 1.55rem;
-  text-transform: uppercase;
-}
-
-.detail {
-  margin: 8px 0;
-}
-
-.description-box {
-  background: #fff8e5;
-  border-left: 5px solid var(--gold);
-  padding: 14px;
-  border-radius: 8px;
-  margin: 18px 0;
+.hero-actions {
+  margin-top: 24px;
 }
 
 .button {
@@ -177,9 +132,10 @@ body {
   border: 2px solid var(--gold);
   text-decoration: none;
   padding: 14px 22px;
-  border-radius: 8px;
-  font-weight: bold;
-  margin-top: 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  margin: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.20);
 }
 
 .button:hover {
@@ -187,23 +143,129 @@ body {
   color: var(--white);
 }
 
+.button.secondary {
+  background: transparent;
+  color: var(--white);
+}
+
+.button.secondary:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 42px 18px 58px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-title small {
+  color: #9c6d12;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 6px 0 0;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  text-transform: uppercase;
+}
+
+.excursion-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.event-card {
+  background: var(--white);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,.16);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.event-image-wrap {
+  position: relative;
+}
+
+.event-image {
+  width: 100%;
+  display: block;
+}
+
+.event-badge {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  background: var(--gold);
+  color: var(--black);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(0,0,0,.24);
+}
+
+.event-body {
+  padding: 26px;
+}
+
+.event-title {
+  margin: 0 0 10px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  text-transform: uppercase;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.detail-box {
+  background: #fff8e5;
+  border-left: 5px solid var(--gold);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.detail-box strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.description-box {
+  background: #f8f8f8;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 18px 0;
+}
+
 .payment-card {
   background: var(--black);
   color: var(--white);
   border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 16px;
+  padding: 20px;
   margin-top: 20px;
 }
 
 .payment-card h4 {
   color: var(--gold);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   margin: 0 0 10px;
 }
 
 .payment-card .payment-instruction {
-  color: var(--gold);
+  color: var(--gold-soft);
   margin-bottom: 14px;
 }
 
@@ -216,7 +278,7 @@ body {
 .payment-method {
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(213,169,58,.75);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 14px;
 }
 
@@ -228,7 +290,7 @@ body {
 
 .payment-value {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .payment-note {
@@ -236,17 +298,72 @@ body {
   margin-top: 14px;
 }
 
-.coming-soon {
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(180deg, #fff, #fbf7ee);
+.countdown-card {
+  background:
+    radial-gradient(circle at top left, rgba(213,169,58,.25), transparent 35%),
+    linear-gradient(145deg, #050505, #181818);
+  color: var(--white);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.16);
+  border: 1px solid var(--gold);
+  position: sticky;
+  top: 95px;
 }
 
-.coming-soon img {
-  width: 110px;
+.countdown-card h3 {
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.countdown-box {
+  border: 1px solid rgba(213,169,58,.75);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  background: rgba(255,255,255,.06);
+}
+
+.countdown-number {
+  display: block;
+  color: var(--gold);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.coming-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.coming-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.10);
+}
+
+.coming-card img {
+  width: 90px;
   margin-bottom: 10px;
 }
 
@@ -255,14 +372,14 @@ body {
   color: var(--white);
   text-align: center;
   border-top: 3px solid var(--gold);
-  padding: 25px 18px;
+  padding: 26px 18px;
 }
 
 .site-footer span {
   color: var(--gold);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .header-inner {
     justify-content: center;
     text-align: center;
@@ -277,11 +394,34 @@ body {
     margin: 7px 8px;
   }
 
-  .hero-logo {
-    width: 220px;
+  .hero {
+    min-height: 540px;
+    padding: 48px 16px;
   }
 
+  .hero-logo {
+    width: 190px;
+  }
+
+  .excursion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown-card {
+    position: static;
+  }
+}
+
+@media (max-width: 540px) {
   .payment-methods {
     grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .event-body {
+    padding: 20px;
   }
 }
