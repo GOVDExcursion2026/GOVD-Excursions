@@ -145,6 +145,8 @@ body {
 
 .card-body {
   padding: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image {
@@ -229,6 +231,7 @@ body {
   border-radius: 8px;
   font-weight: bold;
   margin-top: 22px;
+  clear: both;
 }
 
 .register-button:hover {

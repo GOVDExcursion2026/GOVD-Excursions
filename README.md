@@ -1,3 +1,3 @@
 # GOVD Excursions Website
 
-Version 7.4: rebuilt card layout with registration button below payment information.
+Version 7.5: button fixed as the last item at the bottom of the Dollywood card.
