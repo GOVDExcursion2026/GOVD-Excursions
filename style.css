@@ -235,12 +235,10 @@ body {
   box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
 
-
 .register-button:hover{
   background:linear-gradient(180deg,#f2d06c,#d9a51d);
   transform:translateY(-1px);
 }
-
 
 .button {
   display: inline-block;
