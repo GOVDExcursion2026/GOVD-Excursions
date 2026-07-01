@@ -257,20 +257,6 @@ body {
   color: var(--white);
 }
 
-.coming-soon {
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(180deg, #fff, #fbf7ee);
-}
-
-.coming-soon img {
-  width: 110px;
-  margin-bottom: 10px;
-}
-
 .site-footer {
   background: var(--black);
   color: var(--white);
