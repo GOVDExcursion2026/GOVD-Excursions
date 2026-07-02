@@ -1,3 +1,3 @@
-# GOVD Excursions Website
+GOVD Excursions Website
 
-Current look preserved. Includes Dollywood, Adventure Zipline Park, and White Water Rafting.
+Logo cache-fix version. The site now references images/govd-logo-black.png instead of the older govd-logo.png file.
